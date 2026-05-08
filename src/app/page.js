@@ -2,6 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
+    <>
     <div className="flex flex-col flex-1 items-center justify-center bg-amber-900 font-sans">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-center py-32 px-16 sm:items-center">
         <div className="flex flex-col items-center gap-2 text-center sm:items-center">
@@ -31,5 +32,6 @@ export default function Home() {
         </div>
       </main>
     </div>
+  </>
   );
 }

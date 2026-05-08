@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+     "paths": {
+      "@/*": ["./*"]
+    },
     "target": "ES2017",
     "lib": [
       "dom",
@@ -30,7 +33,7 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/componenets/Navigation.jsx"  ],
   "exclude": [
     "node_modules"
   ]
