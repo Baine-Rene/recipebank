@@ -33,12 +33,10 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen w-full bg-[#F5E642] text-[#2C2C2A] flex flex-col lg:flex-row lg:h-screen lg:overflow-hidden">
-
-      {/* LEFT — Hero */}
+    <div className="min-h-screen w-full bg-[#594b3c] text-[#ffe26e] flex flex-col lg:flex-row lg:h-screen lg:overflow-hidden">
       <main className="flex flex-col justify-between px-8 py-10 lg:px-12 lg:py-10 lg:w-1/2 lg:border-r-2 border-b-2 lg:border-b-0 border-[#2C2C2A]">
         <p
-          className="text-[10px] font-bold tracking-[0.22em] uppercase text-[#2C2C2A]/50"
+          className="text-[10px] font-bold tracking-[0.22em] uppercase text-[#ffe26e]/85"
           style={{ fontFamily: "sans-serif" }}
         >
           Your community cookbook
@@ -47,20 +45,19 @@ export default function Home() {
         {/* Wordmark */}
         <div className="py-8 lg:py-0">
           <h1
-            className="font-black uppercase text-[#2C2C2A] leading-[0.85]"
+            className="font-black uppercase leading-[0.85]"
             style={{
               fontSize: "clamp(3.5rem, 9vw, 6.5rem)",
-              fontFamily: "'Georgia', serif",
               letterSpacing: "-0.02em",
             }}
           >
             Recipe
           </h1>
           <h1
-            className="font-black italic text-[#2C2C2A] leading-[0.85]"
+            className="font-black italic leading-[0.85]"
             style={{
               fontSize: "clamp(3.5rem, 9vw, 6.5rem)",
-              fontFamily: "'Georgia', serif",
+              fontFamily: "'playball', serif",
               letterSpacing: "-0.02em",
             }}
           >
@@ -71,7 +68,7 @@ export default function Home() {
         {/* Tagline + CTA */}
         <div className="flex flex-col gap-4">
           <p
-            className="text-sm leading-relaxed text-[#2C2C2A]/65 max-w-[260px]"
+            className="text-sm leading-relaxed font-sans text-[#ffe26e]/85 max-w-[260px]"
             style={{ fontFamily: "sans-serif" }}
           >
             Share your recipe and inspire others. Upload, discover, and learn.
