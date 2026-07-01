@@ -93,7 +93,7 @@ export default function Home() {
       </main>
 
       {/* RIGHT — 2×2 nav grid */}
-      <div className="grid lg:grid-cols-2 lg:grid-rows-2 md:grid-cols-2 md:grid-rows-2 lg:w-1/2 lg:h-full">
+      <div className="grid grid-rows-1 lg:grid-cols-2 lg:grid-rows-2 md:grid-rows-2 lg:w-1/2 lg:h-full">
         {navCards.map((card, i) => (
           <Link
             key={card.title}
