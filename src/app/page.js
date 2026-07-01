@@ -73,13 +73,22 @@ export default function Home() {
           >
             Share your recipe and inspire others. Upload, discover, and learn.
           </p>
-          <a
+          <div className="flex flex-row gap-2">
+            <a
             href="/join"
             className="self-start h-11 px-8 flex items-center justify-center rounded-full bg-[#2C2C2A] text-[#F5E642] text-xs font-bold tracking-widest uppercase hover:bg-[#444441] transition-colors"
             style={{ fontFamily: "sans-serif" }}
           >
+            Login
+          </a>
+          <a
+            href="/join"
+            className="self-start h-11 px-8 flex items-center justify-center rounded-full bg-[#ffff87] text-black text-xs font-bold tracking-widest uppercase hover:bg-[#444441] transition-colors"
+            style={{ fontFamily: "sans-serif" }}
+          >
             Join free
           </a>
+          </div>
         </div>
       </main>
 
