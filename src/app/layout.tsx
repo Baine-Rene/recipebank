@@ -1,3 +1,5 @@
+declare module "*.css";
+
 import { Geist, Geist_Mono, Edu_AU_VIC_WA_NT_Pre  } from "next/font/google";
 import "./globals.css";
 
