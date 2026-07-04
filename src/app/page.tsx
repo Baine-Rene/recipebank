@@ -59,7 +59,7 @@ export default function Home() {
             className="font-black italic leading-[0.85]"
             style={{
               fontSize: "clamp(3.5rem, 9vw, 6.5rem)",
-              fontFamily: "'playball', serif",
+              fontFamily: "'fruktur', serif",
               letterSpacing: "-0.02em",
             }}
           >

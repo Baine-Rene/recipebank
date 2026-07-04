@@ -1,10 +1,18 @@
 declare module "*.css";
 
 import { Geist, Geist_Mono, Edu_AU_VIC_WA_NT_Pre  } from "next/font/google";
+import { Fruktur } from "next/font/google";
 import "./globals.css";
 
 
+const fruktur = Fruktur({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-fruktur",
+})
+
 const eduFont = Edu_AU_VIC_WA_NT_Pre({
+  weight: "400",
   subsets: ["latin"],
   variable: "--font-edu",
 })
@@ -27,7 +35,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${eduFont.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${eduFont.variable} ${fruktur.variable}  h-full antialiased`}
     >
       <body>
         {children}
