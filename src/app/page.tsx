@@ -35,6 +35,13 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full bg-[#594b3c] text-[#ffe26e] flex flex-col lg:flex-row lg:h-screen lg:overflow-hidden">
       <main className="flex flex-col justify-between px-8 py-10 lg:px-12 lg:py-10 lg:w-1/2 lg:border-r-2 border-b-2 lg:border-b-0 border-[#2C2C2A]">
+        <svg
+          viewBox="0 0 720 1024" // match your Figma frame size
+          preserveAspectRatio="xMidYMid slice" // "slice" = cover, "meet" = contain
+          className="absolute inset-0 w-full h-full pointer-events-none z-0"
+        >
+          
+        </svg>
         <p
           className="text-[10px] font-bold tracking-[0.22em] uppercase text-[#ffe26e]/85"
           style={{ fontFamily: "sans-serif" }}
@@ -75,19 +82,19 @@ export default function Home() {
           </p>
           <div className="flex flex-row gap-2">
             <a
-            href="/join"
-            className="self-start h-11 px-8 flex items-center justify-center rounded-full bg-[#2C2C2A] text-[#F5E642] text-xs font-bold tracking-widest uppercase hover:bg-[#444441] transition-colors"
-            style={{ fontFamily: "sans-serif" }}
-          >
-            Login
-          </a>
-          <a
-            href="/join"
-            className="self-start h-11 px-8 flex items-center justify-center rounded-full bg-[#ffff87] text-black text-xs font-bold tracking-widest uppercase hover:bg-[#444441] transition-colors"
-            style={{ fontFamily: "sans-serif" }}
-          >
-            Join free
-          </a>
+              href="/join"
+              className="self-start h-11 px-8 flex items-center justify-center rounded-full bg-[#2C2C2A] text-[#F5E642] text-xs font-bold tracking-widest uppercase hover:bg-[#444441] transition-colors"
+              style={{ fontFamily: "sans-serif" }}
+            >
+              Login
+            </a>
+            <a
+              href="/join"
+              className="self-start h-11 px-8 flex items-center justify-center rounded-full bg-[#ffff87] text-black text-xs font-bold tracking-widest uppercase hover:bg-[#444441] transition-colors"
+              style={{ fontFamily: "sans-serif" }}
+            >
+              Join free
+            </a>
           </div>
         </div>
       </main>
