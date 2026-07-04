@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen w-full bg-[#594b3c] text-[#ffe26e] flex flex-col lg:flex-row lg:h-screen lg:overflow-hidden">
-      <main className="relative overflow-hidden flex flex-col justify-between px-8 py-10 lg:px-12 lg:py-10 lg:w-1/2 lg:border-r-2 border-b-2 lg:border-b-0 border-[#2C2C2A]">
+      <main className="relative overflow-hidden flex flex-col justify-between px-8 py-10 lg:px-12 lg:py-10 lg:w-1/2">
         <HeroBackgroundArt/>
         <p
           className="text-[10px] font-bold tracking-[0.22em] uppercase text-[#ffe26e]/85"
@@ -45,7 +45,7 @@ export default function Home() {
         </p>
 
         {/* Wordmark */}
-        <div className="py-8 lg:py-0">
+        <div className="py-8 lg:py-0 z-10">
           <h1
             className="font-black uppercase leading-[0.85]"
             style={{
@@ -63,7 +63,7 @@ export default function Home() {
               letterSpacing: "-0.02em",
             }}
           >
-            Bank.
+            Bank
           </h1>
         </div>
 
