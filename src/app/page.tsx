@@ -77,14 +77,14 @@ export default function Home() {
           </p>
           <div className="flex flex-row gap-2">
             <a
-              href="/join"
+              href="/login"
               className="self-start h-11 px-8 flex items-center justify-center rounded-full bg-[#2C2C2A] text-[#F5E642] text-xs font-bold tracking-widest uppercase hover:bg-[#444441] transition-colors"
               style={{ fontFamily: "sans-serif" }}
             >
               Login
             </a>
             <a
-              href="/join"
+              href="/signup"
               className="self-start h-11 px-8 flex items-center justify-center rounded-full bg-[#ffff87] text-black text-xs font-bold tracking-widest uppercase hover:bg-[#444441] transition-colors"
               style={{ fontFamily: "sans-serif" }}
             >
