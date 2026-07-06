@@ -23,7 +23,9 @@ export function LoginForm({
           </p>
         </div>
         <Field>
-          <FieldLabel htmlFor="email">Email</FieldLabel>
+          <FieldLabel className="text-[#ffe26e] font-bold" htmlFor="email">
+            Email
+          </FieldLabel>
           <Input
             className="bg-white"
             id="email"
@@ -34,10 +36,12 @@ export function LoginForm({
         </Field>
         <Field>
           <div className="flex items-center">
-            <FieldLabel htmlFor="password">Password</FieldLabel>
+            <FieldLabel className="text-[#ffe26e] font-bold" htmlFor="password">
+              Password
+            </FieldLabel>
             <a
               href="#"
-              className="ml-auto text-sm underline-offset-4 hover:underline"
+              className="ml-auto text-white text-sm underline-offset-4 hover:underline"
             >
               Forgot your password?
             </a>
@@ -47,7 +51,9 @@ export function LoginForm({
         <Field>
           <Button type="submit">Login</Button>
         </Field>
-        <FieldSeparator>Or continue with</FieldSeparator>
+        <FieldSeparator className="[&>span]:text-white [&>span]:bg-[#594b3c]">
+          Or continue with
+        </FieldSeparator>
         <Field>
           <Button variant="outline" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -70,7 +76,7 @@ export function LoginForm({
             </svg>
             Login with Google
           </Button>
-          <FieldDescription className="text-center">
+          <FieldDescription className="text-center text-white">
             Don&apos;t have an account?{" "}
             <a href="#" className="underline underline-offset-4">
               Sign up
