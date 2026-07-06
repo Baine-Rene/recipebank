@@ -1,13 +1,14 @@
-import { Circle, CircleDot, CircleIcon, GalleryVerticalEnd, GaugeCircleIcon, LucideCircleDot, PlayCircle } from "lucide-react"
+import { Circle} from "lucide-react"
+import Image from "next/image"
 
 import { LoginForm } from "@/components/login-form"
 
 export default function LoginPage() {
   return (
-    <div className="grid min-h-svh lg:grid-cols-2">
+    <div className="grid min-h-svh lg:grid-cols-2 bg-[#594b3c]">
       <div className="flex flex-col gap-4 p-6 md:p-10">
         <div className="flex justify-center gap-2 md:justify-start text-[#ffe26e]">
-          <a href="#" className="flex items-center gap-2 font-medium">
+          <a href="/" className="flex items-center gap-2 font-medium">
             <div className="flex size-6 items-center justify-center rounded-md bg-[#ffe26e] text-black">
               <Circle className="size-4 text-" />
             </div>
@@ -21,8 +22,10 @@ export default function LoginPage() {
         </div>
       </div>
       <div className="relative hidden bg-muted lg:block">
-        <img
-          src="/placeholder.svg"
+        <Image
+        width={500}
+        height={500}
+          src=""
           alt="Image"
           className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
         />

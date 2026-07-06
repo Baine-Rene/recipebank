@@ -16,15 +16,15 @@ export function LoginForm({
   return (
     <form className={cn("flex flex-col gap-6", className)} {...props}>
       <FieldGroup>
-        <div className="flex flex-col items-center gap-1 text-center">
-          <h1 className="text-2x  font-bold">Login to your account</h1>
-          <p className="text-sm text-balance">
+        <div className="flex flex-col items-center gap-1 text-center text-[#ffe26e]">
+          <h1 className="text-2xl  font-bold">Login to your account</h1>
+          <p className="text-sm font-medium text-balance">
             Enter your email below to login to your account
           </p>
         </div>
         <Field>
           <FieldLabel htmlFor="email">Email</FieldLabel>
-          <Input id="email" type="email" placeholder="m@example.com" required />
+          <Input className="bg-white" id="email" type="email" placeholder="johndoe@example.com" required />
         </Field>
         <Field>
           <div className="flex items-center">
@@ -36,7 +36,7 @@ export function LoginForm({
               Forgot your password?
             </a>
           </div>
-          <Input id="password" type="password" required />
+          <Input className="bg-white" id="password" type="password" required />
         </Field>
         <Field>
           <Button type="submit">Login</Button>
@@ -50,7 +50,7 @@ export function LoginForm({
                 fill="currentColor"
               />
             </svg>
-            Login with GitHub
+            Login with Google
           </Button>
           <FieldDescription className="text-center">
             Don&apos;t have an account?{" "}

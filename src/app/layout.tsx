@@ -1,6 +1,7 @@
 declare module "*.css";
 
-import { Fruktur, Geist, Geist_Mono, Edu_AU_VIC_WA_NT_Pre } from "next/font/google";
+import { Geist, Geist_Mono, Edu_AU_VIC_WA_NT_Pre  } from "next/font/google";
+import { Fruktur } from "next/font/google";
 import "./globals.css";
 
 
