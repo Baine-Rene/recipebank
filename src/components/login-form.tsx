@@ -1,12 +1,12 @@
-'use client'
+"use client";
 
-import { useState, FormEvent } from 'react';
-import { useRouter } from 'next/navigation';
-import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
-import { auth, googleProvider } from '@/lib/firebase';
+import { useState, FormEvent } from "react";
+import { useRouter } from "next/navigation";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { auth, googleProvider } from "@/lib/firebase";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input"
+import { Input } from "@/components/ui/input";
 import {
   Field,
   FieldDescription,
@@ -14,26 +14,23 @@ import {
   FieldLabel,
   FieldSeparator,
 } from "@/components/ui/field";
-;
-
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"form">) {
-
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError('');
+    setError("");
     setLoading(true);
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      router.push('/recipes');
+      router.push("/recipes");
     } catch (err: any) {
       setError(mapFirebaseError(err.code));
     } finally {
@@ -42,10 +39,10 @@ export function LoginForm({
   };
 
   const handleGoogleLogin = async () => {
-    setError('');
+    setError("");
     try {
       await signInWithPopup(auth, googleProvider);
-      router.push('/recipes');
+      router.push("/recipes");
     } catch (err: any) {
       setError(mapFirebaseError(err.code));
     }
@@ -116,7 +113,7 @@ export function LoginForm({
           </Button>
           <FieldDescription className="text-center text-white">
             Don&apos;t have an account?{" "}
-            <a href="#" className="underline underline-offset-4">
+            <a href="/signup" className="underline underline-offset-4">
               Sign up
             </a>
           </FieldDescription>
@@ -127,15 +124,16 @@ export function LoginForm({
 }
 function mapFirebaseError(code: string): string {
   const errorMap: Record<string, string> = {
-    'auth/user-not-found': 'No account found with this email.',
-    'auth/wrong-password': 'Incorrect password.',
-    'auth/invalid-email': 'Invalid email address.',
-    'auth/user-disabled': 'This account has been disabled.',
-    'auth/too-many-requests': 'Too many login attempts. Please try again later.',
-    'auth/popup-closed-by-user': 'Google login was cancelled.',
-    'auth/network-request-failed': 'Network error. Please check your connection.',
+    "auth/user-not-found": "No account found with this email.",
+    "auth/wrong-password": "Incorrect password.",
+    "auth/invalid-email": "Invalid email address.",
+    "auth/user-disabled": "This account has been disabled.",
+    "auth/too-many-requests":
+      "Too many login attempts. Please try again later.",
+    "auth/popup-closed-by-user": "Google login was cancelled.",
+    "auth/network-request-failed":
+      "Network error. Please check your connection.",
   };
 
-  return errorMap[code] || 'An error occurred during login. Please try again.';
+  return errorMap[code] || "An error occurred during login. Please try again.";
 }
-
