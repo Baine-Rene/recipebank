@@ -6,7 +6,7 @@ export default function SignupPage() {
   return (
     <div className="grid min-h-svh lg:grid-cols-2">
       <div className="flex flex-col gap-4 p-6 md:p-10 bg-[#594b3c]">
-        <div className="flex justify-center gap-2 md:justify-start">
+        <div className="flex justify-center gap-2 md:justify-start text-[#ffe26e]">
           <a href="#" className="flex items-center gap-2 font-medium">
             <div className="flex size-6 items-center justify-center rounded-md bg-[#ffe26e] text-black">
               <Circle className="size-4" />
