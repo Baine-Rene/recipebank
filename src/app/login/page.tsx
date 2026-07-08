@@ -1,6 +1,5 @@
-import { Circle} from "lucide-react"
+import { Circle } from "lucide-react"
 import Image from "next/image"
-
 import { LoginForm } from "@/components/login-form"
 
 export default function LoginPage() {
@@ -10,7 +9,7 @@ export default function LoginPage() {
         <div className="flex justify-center gap-2 md:justify-start text-[#ffe26e]">
           <a href="/" className="flex items-center gap-2 font-medium">
             <div className="flex size-6 items-center justify-center rounded-md bg-[#ffe26e] text-black">
-              <Circle className="size-4 text-" />
+              <Circle className="size-4" />
             </div>
             RecipeBank.
           </a>
@@ -23,9 +22,9 @@ export default function LoginPage() {
       </div>
       <div className="relative hidden bg-muted lg:block">
         <Image
-        width={500}
-        height={500}
-          src=""
+          width={500}
+          height={500}
+          src="/login-hero.jpg"
           alt="Image"
           className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
         />

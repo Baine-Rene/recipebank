@@ -1,5 +1,12 @@
+'use client'
+
+import { useState, FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
+import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { auth, googleProvider } from '@/lib/firebase';
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input"
 import {
   Field,
   FieldDescription,
@@ -7,12 +14,43 @@ import {
   FieldLabel,
   FieldSeparator,
 } from "@/components/ui/field";
-import { Input } from "@/components/ui/input";
+;
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"form">) {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
+  const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError('');
+    setLoading(true);
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      router.push('/recipes');
+    } catch (err: any) {
+      setError(mapFirebaseError(err.code));
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    setError('');
+    try {
+      await signInWithPopup(auth, googleProvider);
+      router.push('/recipes');
+    } catch (err: any) {
+      setError(mapFirebaseError(err.code));
+    }
+  };
+
   return (
     <form className={cn("flex flex-col gap-6", className)} {...props}>
       <FieldGroup>
@@ -87,3 +125,17 @@ export function LoginForm({
     </form>
   );
 }
+function mapFirebaseError(code: string): string {
+  const errorMap: Record<string, string> = {
+    'auth/user-not-found': 'No account found with this email.',
+    'auth/wrong-password': 'Incorrect password.',
+    'auth/invalid-email': 'Invalid email address.',
+    'auth/user-disabled': 'This account has been disabled.',
+    'auth/too-many-requests': 'Too many login attempts. Please try again later.',
+    'auth/popup-closed-by-user': 'Google login was cancelled.',
+    'auth/network-request-failed': 'Network error. Please check your connection.',
+  };
+
+  return errorMap[code] || 'An error occurred during login. Please try again.';
+}
+
