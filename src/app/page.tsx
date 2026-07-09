@@ -2,6 +2,7 @@ import Link, { type LinkProps } from "next/link";
 import { type ComponentType, type PropsWithChildren } from "react";
 import { HeroBackgroundArt } from "@/components/hero-background";
 
+
 const LinkWithChildren = Link as ComponentType<PropsWithChildren<LinkProps>>;
 
 export default function Home() {
